@@ -237,3 +237,9 @@ Then(
     Cypress.env("vrtActive") && cy.screenshot("page29");
   }
 );
+
+When("I write {string} in the page title", (title) => {
+  writeTitle(title);
+  cy.wait(100);
+  Cypress.env("vrtActive") && cy.screenshot("page30");
+});

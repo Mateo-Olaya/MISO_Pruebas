@@ -1,13 +1,13 @@
 {
   "testFiles": "**/*.feature",
   "env": {
-    "url_admin": "http://localhost:3002/ghost/",
+    "url_admin": "http://localhost:3001/ghost/",
     "admin_email": "test_ghost_g13@gmail.com",
     "admin_password": "prueba123123",
-    "ghost_url": "http://localhost:3002/",
+    "ghost_url": "http://localhost:3001/",
     "vrtActive": false
   },
-  "screenshotsFolder": "cypress/screenshots_4-41",
+  "screenshotsFolder": "cypress/screenshots_4-39",
   "viewportHeight": 1080,
   "viewportWidth": 1920
 }

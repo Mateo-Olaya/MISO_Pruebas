@@ -82,7 +82,7 @@ async function executeTest() {
                         }
                         fs.writeFileSync(`./results/${datetime}/compare-${b}-${name}${i}.png`, data.getBuffer());
                     } catch (e) {
-                        console.log(e);
+                        // console.log(e);
                     }
 
                 }

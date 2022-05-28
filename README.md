@@ -40,23 +40,56 @@ Pre-requisitos:
   
 * Ejecutar `npm install` en la carpeta en la que se clonó este repositorio
 
+
+## Correr modo pruebas de regresion visual en Ghost v4.41
+**Para que el reporte funcione se debe correr caso por caso de pruebas, NO todos al tiempo**
+
+
+** En el archivo index.js aparecen comentados casos de pruebas, si se desea ver el reporte de todos quitar el comentario de la lista `functionalities` ubicado en la linea 13 **
+
+En el archivo `cypress.json` debe estar la siguiente configuración. Se puede verificar que se está ejecutando en modo pruebas de regresión visual con la siguiente configuración.
+
+```
+  {
+  "testFiles": "**/*.feature",
+  "env": {
+    "url_admin": "http://localhost:3001/ghost/",
+    "admin_email": "test_ghost_g13@gmail.com",
+    "admin_password": "prueba123123",
+    "ghost_url": "http://localhost:3001/",
+    "vrtActive": true     //Esto es para que se ejecute  el modo de pruebas de regresión visual, cambiar a false si no se desea
+  },
+  "screenshotsFolder": "cypress/screenshots_4-41",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920
+}
+```
+## Correr modo pruebas de regresion visual en Ghost v4.39
+**Para que el reporte funcione se debe correr caso por caso de pruebas, NO todos al tiempo**
+En el archivo `cypress.json` debe estar la siguiente configuración. Se puede verificar que se está ejecutando en modo pruebas de regresión visual con la siguiente configuración.
+```
+  {
+  "testFiles": "**/*.feature",
+  "env": {
+    "url_admin": "http://localhost:3002/ghost/",
+    "admin_email": "test_ghost_g13@gmail.com",
+    "admin_password": "prueba123123",
+    "ghost_url": "http://localhost:3002/",
+    "vrtActive": true
+  },
+  "screenshotsFolder": "cypress/screenshots_4-39",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920
+}
+```
+# Generar reporte de pruebas
+Para correr el reporte de pruebas se debe ejecutar el comando `node index.js` en la raíz del proyecto
+Ir a la ruta *./results/< Fecha actual >/report.html* y se verá el reporte de las pruebas
+
 # Cypress
 * Ejecutar el comando `npm run cypress:open` en la raíz del proyecto
 * Hacer click en el archivo de pruebas que se desea ejecutar
 
-# Estrategia de pruebas
-
-### Pool de datos a-priori
-* Se genero el archivo data.json en el directorio cypress> data. El json fue generado usando la herramienta Mockaroo. Estos datos fueron integrados principalmente en los escenarios de Login Feature.
-
-### Pool de datos (pseudo) aleatorio dinámico
-* Se guardaron los datos en la misma función de la feature Create Page y en tiempo de ejecución se escogió de forma aleatoria el dato a presentar en el escenario de prueba. Se creó el dato en un paso, y en uno posterior se reutilizó la informacion.
-
-### Escenario aleatorio
-* Se usó la libreria de Faker para seleccionar los datos de los escenarios relacionados con las features de Settings. Esto facilitó crear un gran nivel de datos de prueba para cada una de las ejecuciones, en tanto no fue necesario construir el data pool de manera manual. 
-
-### Inventario de pruebas manuales
+# Inventario de pruebas manuales
 [Enlace Inventario de pruebas](https://uniandes-my.sharepoint.com/:x:/g/personal/m_olaya11_uniandes_edu_co/EcWmfoiyKzNErRIPoy_fxocB67wWsyoP-3PDrX_HZoliVA?e=JeuobZ)
 
-
-### Relación de las estrategias y los casos de prueba

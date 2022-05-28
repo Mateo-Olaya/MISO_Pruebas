@@ -5,6 +5,11 @@ Integrantes:
 * Mateo Olaya Osorio m.olaya11@uniandes.edu.co
 
 # Dado que el grupo es de dos personas, la estrategia de pruebas tuvo en cuenta el tiempo de dos tester senior.
+# Enlace estrategia de pruebas
+[Enlace estrategia de pruebas](https://uniandes-my.sharepoint.com/:w:/g/personal/m_olaya11_uniandes_edu_co/EXcuxM_z7LpDsQ8N5aQxrKoBk01rzW9Rn4Erbt-x429y3Q?e=fFAVuS)
+
+# Inventario de pruebas manuales
+[Enlace Inventario de pruebas](https://uniandes-my.sharepoint.com/:x:/g/personal/m_olaya11_uniandes_edu_co/EcWmfoiyKzNErRIPoy_fxocB67wWsyoP-3PDrX_HZoliVA?e=JeuobZ)
 
 ## Cómo ejecutar los tests
 
@@ -89,7 +94,3 @@ Ir a la ruta *./results/< Fecha actual >/report.html* y se verá el reporte de l
 # Cypress
 * Ejecutar el comando `npm run cypress:open` en la raíz del proyecto
 * Hacer click en el archivo de pruebas que se desea ejecutar
-
-# Inventario de pruebas manuales
-[Enlace Inventario de pruebas](https://uniandes-my.sharepoint.com/:x:/g/personal/m_olaya11_uniandes_edu_co/EcWmfoiyKzNErRIPoy_fxocB67wWsyoP-3PDrX_HZoliVA?e=JeuobZ)
-
